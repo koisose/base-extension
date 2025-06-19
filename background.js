@@ -8,8 +8,8 @@ chrome.action.onClicked.addListener((tab) => {
   chrome.windows.create({
     url: 'popup.html',
     type: 'popup',
-    width: 400,
-    height: 600,
+    width: 500,
+    height: 700,
     focused: true
   });
 });
@@ -20,8 +20,8 @@ chrome.commands.onCommand.addListener((command) => {
     chrome.windows.create({
       url: 'popup.html',
       type: 'popup',
-      width: 400,
-      height: 600,
+      width: 500,
+      height: 700,
       focused: true
     });
   }
