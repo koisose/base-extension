@@ -4,10 +4,10 @@
   "version": "1.0.0",
   "description": "A beautiful and simple note-taking extension for quick thoughts and reminders",
   "permissions": [
-    "storage"
+    "storage",
+    "commands"
   ],
   "action": {
-    "default_popup": "popup.html",
     "default_title": "Quick Notes",
     "default_icon": {
       "16": "icons/icon16.png",
@@ -24,5 +24,14 @@
   },
   "background": {
     "service_worker": "background.js"
+  },
+  "commands": {
+    "open-quick-notes": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      },
+      "description": "Open Quick Notes"
+    }
   }
 }

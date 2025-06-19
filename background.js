@@ -5,12 +5,24 @@ chrome.runtime.onInstalled.addListener(() => {
 
 // Handle extension icon click
 chrome.action.onClicked.addListener((tab) => {
-  // The popup will open automatically, no need to handle this
+  chrome.windows.create({
+    url: 'popup.html',
+    type: 'popup',
+    width: 400,
+    height: 600,
+    focused: true
+  });
 });
 
 // Optional: Add keyboard shortcut handling
 chrome.commands.onCommand.addListener((command) => {
   if (command === 'open-quick-notes') {
-    chrome.action.openPopup();
+    chrome.windows.create({
+      url: 'popup.html',
+      type: 'popup',
+      width: 400,
+      height: 600,
+      focused: true
+    });
   }
 });
